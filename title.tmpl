@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <% if {results} %>
+            <h4>ETDs with <i>{term}</i> in the title <small><span class="badge">{count}</span> ETDs</small></h4>
+            <p><a href="title.php"><span class="glyphicon glyphicon-arrow-left"></span> Back to full cloud</a></p>
+            <ul>
+              <% repeat {results} %>
+                <li>{name} ({degree}) <a href="etd.php?urn={urn}">{title}</a>, {date}.</li>
+              <% end %>
+            </ul>
+
+            <p><a href="title.php"><span class="glyphicon glyphicon-arrow-left"></span> Back to full cloud</a></p>
+
+          <% else %>
+          <h4>Title word cloud: <small><span class="badge">{count}</span> top words</small></h4>
+          <div id="whatever">
+            <% repeat {tags} %>
+              <a href="title.php?q={tag}" rel="{count}">{tag}</a>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Obtain latest version of jquery automatically -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="jquery.tagcloud.js"></script>
+
+    <script>
+      $.fn.tagcloud.defaults = {
+        size: {start: 12, end: 36, unit: 'pt'},
+        color: {start: '#038', end: '#0AF'}
+      };
+
+      $(function () {
+        $('#whatever a').tagcloud();
+      });
+      </script>
+  </body>
+</html>

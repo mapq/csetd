@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <% repeat {etds} %>
+            <% if {loopfirst} %>
+              <h4>ETDs <small><span class="badge">{count}</span> records</small></h4>
+              <% include showhide.tmpl %>
+              <ul>
+            <% end %>
+            <% if {break} %>
+              </ul>
+              <h5>{year}</h5>
+              <ul>
+            <% end %>
+            <li><span class="show-name">{name}</span><span class="show-degree"> ({degree})</span><span class="show-title">, <a href="etd.php?urn={urn}">{title}</a></span><span class="show-date">, {date}</span>.</li>
+          <% end %>
+            </ul>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Obtain latest version of jquery automatically -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+    <div class="container">
+      <div class="row well well-sm">
+        <h4>{title}</h4>
+        <p><a onclick="javascript:history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span> Back </a></p>
+        <dl class="dl-horizontal">
+          <dt>Student</dt><dd>{name}</dd>
+          <dt>Degree</dt><dd><a href="degree.php?q={degree}">{degree}</a></dd>
+          <dt>Defense date</dt><dd>{date}</dd>
+          <dt>Department</dt><dd>{department}</dd>
+          <dt>Commitee</dt><dd>
+          <% repeat {committee} %>
+            <a href="advisor.php?q={name}">{name}</a>, {role}<br>
+          <% end %>
+          </dd>
+          <% if {keywords} %>
+            <dt>Keywords</dt><dd>
+            <% repeat {keywords} %>
+              <a href="keyword.php?q={keyword}">{keyword}</a><br>
+            <% end %>
+            </dd>
+          <% end %>
+          <dt>Abstract</dt><dd>{abstract}</dd>
+          <dt>ETD Page</dt><dd><a href="{url}" target="_blank">{url}</a></dd>
+        </dl>
+
+        <p><a onclick="javascript:history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span> Back </a></p>
+      </div>
+
+    </div><!-- /.container -->
+
+    <!-- Obtain latest version of jquery automatically -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

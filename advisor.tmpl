@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+  <div class="container">
+    <div class="row">
+        <% if {any} %>
+          <div class="col-md-12">
+            <% if {etds} %>
+              <h4>Chair: {advisor}</h4>
+              <p><a onclick="javascript:history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span> Back </a></p>
+
+              <ul>
+              <% repeat {etds} %>
+                <li>{name} ({degree}). <a href="etd.php?urn={urn}">{title}</a>, {date}.</li>
+              <% end %>
+              </ul>
+            <% end %>
+
+            <% if {member} %>
+              <h4>Committee: {advisor}</h4>
+              <ul>
+              <% repeat {member} %>
+                <li>{name} ({degree}). <a href="etd.php?urn={urn}">{title}</a>, {date}.</li>
+              <% end %>
+              </ul>
+            <% end %>
+            <p><a onclick="javascript:history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span> Back </a></p>
+          </div>
+        <% else %>
+          <div class="col-md-12">
+            <h4>Committee Chairs</h4>
+          </div>
+          <div class="col-md-3">
+            <ul>
+            <% repeat {chairs} %>
+              <% if {colbreak} %>
+                </ul></div><div class="col-md-3"><ul>
+              <% end %>
+              <li><a href="advisor.php?q={name}">{name}</a></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+      </div>  <!-- row -->
+    </div>  <!-- container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Obtain latest version of jquery automatically -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

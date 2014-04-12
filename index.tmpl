@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+    <div class="container">
+      <div class="row marketing">
+        <div class="col-md-5">
+          <h4>Recent PhDs dissertations</h4>
+          <ul>
+            <% repeat {phdetds} %>
+            <li>{name} ({degree}) <a href="etd.php?urn={urn}">{title}</a>, {date}.</li>
+            <% end %>
+          </ul>
+        </div>  <!-- col-md-5 -->
+
+        <div class="col-md-5">
+          <h4>Recent MS thesis</h4>
+          <ul>
+            <% repeat {msetds} %>
+            <li>{name} ({degree}) <a href="etd.php?urn={urn}">{title}</a>, {date}.</li>
+            <% end %>
+          </ul>
+        </div>  <!-- col-md-5 -->
+        <div class="col-md-2">
+          <h4>Upcoming Defenses</h4>
+  <script type="text/javascript" src="http://people.cs.vt.edu/gback/exams/widget.js"></script>
+  <div class="exam-widget exam-major-csa">&nbsp;</div>
+        </div>
+
+      </div>  <!-- row -->
+    </div><!-- /.container -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

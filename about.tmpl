@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include header.tmpl %>
+<body>
+  <% include navbar.tmpl %>
+
+  <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>About etd.cs.vt.edu</h4>
+          <p>This site contains a collection of Electronic Thesis and Dissertations (etd)
+            for the CS Department at Virginia Tech.  We collect CS etds from the online
+            repositories at VT and provide the searching/browsing interface here to help
+            our students explore our research.</p>
+            <p>Feel free to browse around and explore the research done in our department.</p>
+        </div>
+
+        <div class="col-md-6">
+          <h4>The CS Collection</h4>
+          <p>The collection includes ETDs from two sources:</p>
+          <ul>
+            <li>The ETD Collection at the <a href="http://etd.vt.edu">VT Library</a>.</li>
+            <li>The ETD Collection at <a href="http://vtechworks.lib.vt.edu">VTechWorks</a>.</li>
+          </ul>
+          <p>We collect information from these two collections periodically and include it
+            here. If you have completed your ETD recently, but it is not included in the
+            two collections mentioned above, then it will not be found here either.</p>
+        </div>
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Obtain latest version of jquery automatically -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- Obtain Bootstrap javascript from CDN (online service) so it doesn't have to be on my machine -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="jquery.tagcloud.js"></script>
+
+    <script>
+      $.fn.tagcloud.defaults = {
+        size: {start: 12, end: 36, unit: 'pt'},
+        color: {start: '#038', end: '#0AF'}
+      };
+
+      $(function () {
+        $('#whatever a').tagcloud();
+      });
+      </script>
+  </body>
+</html>

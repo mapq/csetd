@@ -1,0 +1,91 @@
+{
+	"updates" : [
+		{"correct": "Arthur, James D.", "tofix": [
+			{"name": "Arthur, James A."},
+			{"name": "Arthur, James D"}
+		]},
+
+		{"correct": "Bowman, Douglas A.", "tofix": [
+			{"name": "Bowman, Douglas Andrew"}
+		]},
+
+		{"correct": "Butt, Ali R. A.", "tofix": [
+			{"name": "Butt, Ali Raza Ashraf"}
+		]},
+
+		{"correct": "Cameron, Kirk W.", "tofix": [
+			{"name": "Cameron, Kirk W"}
+		]},
+
+		{"correct": "Chen, Ing-Ray", "tofix": [
+			{"name": "Chen, Ing Ray"}
+		]},
+
+		{"correct": "Frakes, William B.", "tofix": [
+			{"name": "Frakes, William B"}
+		]},
+
+		{"correct": "Edwards, Stephen H.", "tofix": [
+			{"name": "Edwards, Stephen H"}
+		]},
+
+		{"correct": "Egyhazy, Csaba J.", "tofix": [
+			{"name": "Egyhazy, Csaba J"}
+		]},
+
+		{"correct": "Ryder, Barbara G.", "tofix": [
+			{"name": "Ryder, Barbara Gershon"}
+		]},
+
+		{"correct": "Fox, Edward Alan", "tofix": [
+			{"name": "Fox, Edward A"}
+		]},
+
+		{"correct": "North, Christopher L.", "tofix": [
+			{"name": "North, Christopher L"}
+		]},
+
+		{"correct": "Shaffer, Clifford A.", "tofix": [
+			{"name": "Shaffer, Clifford A"}
+		]},
+
+		{"correct": "Fan, Weiguo", "tofix": [
+			{"name": "Fan, Weiguo Patrick"}
+		]},
+
+		{"correct": "Marathe, Madhav V.", "tofix": [
+			{"name": "Marathe, Madhav Vishnu"}
+		]},
+
+		{"correct": "Murali, T. M.", "tofix": [
+			{"name": "Murali, T M"}
+		]},
+
+		{"correct": "Perez-Quinones, Manuel A.", "tofix": [
+			{"name": "Perez-Quinonez, Manuel A."},
+			{"name": "Perez-Quinonez, Manuel A"}
+		]},
+
+		{"correct": "Quek, Francis", "tofix": [
+			{"name": "Quek, Francis K. H."}
+		]},
+
+		{"correct": "Ramakrishnan, Naren", "tofix": [
+			{"name": "Ramakrishnan, Narendran"}
+		]},
+
+		{"correct": "Rosson, Mary Beth", "tofix": [
+			{"name": "Rosson, Mary-Beth"}
+		]},
+
+		{"correct": "Feng, Wu-Chun", "tofix": [
+			{"name": "Wu-chun Feng"}
+		]},
+
+		{"correct": "Lu, Chang-Tien", "tofix": [
+			{"name": "Lu, CHang-Tien"},
+			{"name": "Lu, Chang Tien"}
+		]}
+	]
+}
+
