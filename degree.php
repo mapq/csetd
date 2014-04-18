@@ -5,8 +5,13 @@ date_default_timezone_set('America/New_York');
 
 $t = preg_replace('/\.php$/', '.tmpl', __FILE__);
 
+if (!isset($_GET['q']) || !in_array($_GET['q'], array("MS", "PhD"))) {
+  require("404.php");
+  exit;
+}
+
 $q = strtoupper($_GET['q']);
-$data = array();
+$data = array("etds" => array());
 $dbh = connect_database();
 
 $stmt = $dbh->query("SELECT count(urn) FROM etd where UPPER(`degree`) = :degree");
