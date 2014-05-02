@@ -8,8 +8,8 @@ $dbh = connect_database();
 
 // select distinct name from committee where role = "Chair" order by name;
 
-$q = $_GET['q'];
 if (isset($_GET['q'])) {
+	$q = $_GET['q'];
 	$data['any'] = true;
 	$stmt = $dbh->prepare("select * from committee, etd where committee.role = 'Chair' and committee.name = ? and committee.urn = etd.urn order by date desc;");
 	// $stmt->setFetchMode(PDO::FETCH_ASSOC);

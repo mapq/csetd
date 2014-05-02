@@ -7,6 +7,8 @@ $data = array();
 $dbh = connect_database();
 
 if (isset($_GET['q'])) {
+	$k = 0;
+
 	// Find etds with particular word in the title
 	$q = "%".$_GET['q']."%";
 	$stmt = $dbh->prepare("select * from etd where title like ?;");
